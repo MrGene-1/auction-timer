@@ -1,72 +1,11 @@
-/* Reset some basics */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ... your existing styles ... */
+
+#timer.flash {
+  animation: flashRed 1s infinite;
+  color: #e63946; /* bright red */
 }
 
-.container {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.title {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #e63946;
-  text-shadow: 1px 1px #f1faee;
-}
-
-.timer-card {
-  background: #a8dadc;
-  padding: 30px;
-  border-radius: 15px;
-  margin-bottom: 30px;
-  box-shadow: inset 0 5px 15px rgba(0,0,0,0.1);
-}
-
-#status {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #1d3557;
-}
-
-#timer {
-  font-size: 3rem;
-  color: #457b9d;
-  letter-spacing: 3px;
-}
-
-.action-btn {
-  padding: 15px 40px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 10px;
-  background: #e63946;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.action-btn:disabled {
-  background: #aaa;
-  cursor: not-allowed;
-}
-
-.action-btn:hover:not(:disabled) {
-  background: #d62828;
-}
-
-.message {
-  margin-top: 20px;
-  font-size: 1.1rem;
-  color: #1d3557;
+@keyframes flashRed {
+  0%, 50%, 100% { color: #e63946; }
+  25%, 75% { color: #f1faee; }
 }
